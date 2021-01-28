@@ -15,8 +15,6 @@ function formValidation(event) {
     let message = document.getElementById("floatingMessage");
     let submitForm = true;
 
-
-    //validacion de digitos de la tarjeta de credito
     if (!(card.value.length == 16)) {
         myalert.style.display = "block";
         myalert.textContent = "Some fields are missing";
@@ -25,7 +23,7 @@ function formValidation(event) {
     } else {
         card.style.backgroundColor = "white";
     }
-    //validacion de digitos del cvc
+
     if (cvc.value.length != 3) {
         myalert.style.display = "block";
         myalert.textContent = "Some fields are missing";
@@ -35,7 +33,7 @@ function formValidation(event) {
         cvc.style.backgroundColor = "white";
     }
 
-    //validación del amount
+
     if (amount.value.length == 0) {
         myalert.style.display = "block";
         myalert.textContent = "Some fields are missing";
@@ -45,7 +43,6 @@ function formValidation(event) {
         amount.style.backgroundColor = "white";
     }
 
-    //Validacion del nombre
     if (name.value.length == 0) {
         myalert.style.display = "block";
         myalert.textContent = "Some fields are missing";
@@ -55,7 +52,6 @@ function formValidation(event) {
         name.style.backgroundColor = "white";
     }
 
-    //Validación de apellido
     if (lastName.value.length == 0) {
         myalert.style.display = "block";
         myalert.textContent = "Some fields are missing";
@@ -65,7 +61,6 @@ function formValidation(event) {
         lastName.style.backgroundColor = "white";
     }
 
-    //Validación de la ciudad
     if (city.value.length == 0) {
         myalert.style.display = "block";
         myalert.textContent = "Some fields are missing";
@@ -75,7 +70,6 @@ function formValidation(event) {
         city.style.backgroundColor = "white";
     }
 
-    //Validación del estado
     if (states.value == "Pick a State") {
         myalert.style.display = "block";
         myalert.textContent = "Some fields are missing";
@@ -85,7 +79,6 @@ function formValidation(event) {
         states.style.backgroundColor = "white";
     }
 
-    //Validación de la codigo postal
     if (postalCode.value.length == 0) {
         myalert.style.display = "block";
         myalert.textContent = "Some fields are missing";
@@ -95,8 +88,7 @@ function formValidation(event) {
         postalCode.style.backgroundColor = "white";
     }
 
-    //Validación de la tarjeta credito
-    let checkOption = false; //variable boolean.. false , true
+    let checkOption = false;
     for (let i = 0; i < cardType.length; i++) {
         if (cardType[i].checked) {
             checkOption = true;
@@ -111,7 +103,6 @@ function formValidation(event) {
         checkInput.style.backgroundColor = "white";
     }
 
-    //Validación del mensaje
     if (message.value.length == 0) {
         myalert.style.display = "block";
         myalert.textContent = "Some fields are missing";
